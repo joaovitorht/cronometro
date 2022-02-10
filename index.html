@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pomodoro</title>
+
+    <link href="pomodoro.css" rel="stylesheet">
+
 </head>
+
 <body>
-    
+
+    <div id="pomodora">
+        <div id="caixa">
+            <div id="caixa-tempo">
+                <div id="tempo">
+                    <span id="minutos"> 25 </span>
+                    <span> : </span>
+                    <span id="segundos"> 00 </span>
+                </div>
+            </div>
+            <div id="botoes">
+                <div id="botoes_quadra_flex">
+                    <button onclick="tempoLongo()" id="tempo_longo"> 25min </button>
+                    <button onclick="tempoMedio()" id="tempo_medio"> 15min </button>
+                    <button onclick="tempoCurto()" id="tempo_curto"> 5min </button>
+                    <button onclick="pausar()" id="button_pausar"> pausar </button>
+                </div>
+                <div id="botoes_duplo_flex">
+                    <button onclick="botaoContinuar()" id="continuar_tempo"> continuar </button>
+                    <button onclick="resetar()" id="button_resetar"> resetar </button>
+                </div>
+                <div id="alterar_tempo">
+                    <input id="input_tempo" onkeypress="return event.charCode >= 48" type="number" placeholder="coloque o tempo em minutos"/>
+                    <button id="button_alterar_tempo" onclick="verificarValorInput()"> alterar tempo </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="pomodoro.js"></script>
 </body>
+
 </html>
