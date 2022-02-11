@@ -143,7 +143,7 @@ let inputTempo = document.getElementById("input_tempo");
 
 function verificarValorInput(){
     minutos = inputTempo.value
-    if(minutos == 0 || minutos == "" || minutos == "," || minutos == "."){
+    if(minutos == 0){
         alert("coloque um outro numero");
         clearInterval(pararSetInterval)
         voltarInicio()
